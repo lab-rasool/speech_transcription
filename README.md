@@ -31,19 +31,47 @@ Combines NVIDIA NeMo ASR with pyannote.audio speaker diarization for multi-speak
 
 ## Installation
 
-**Option A: Using Conda (recommended for ML projects)**
+### Step 1: Create Environment
+
+**Option A: Using Conda (recommended)**
 ```bash
 conda create -n speech_transcription python=3.11
 conda activate speech_transcription
-pip install -r requirements.txt
 ```
 
 **Option B: Using venv**
 ```bash
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
+```
+
+### Step 2: Install PyTorch with CUDA
+
+Install PyTorch with GPU support **before** other dependencies:
+
+```bash
+# For CUDA 12.4
+pip install torch --index-url https://download.pytorch.org/whl/cu124
+
+# For CUDA 11.8
+pip install torch --index-url https://download.pytorch.org/whl/cu118
+```
+
+Check your CUDA version with `nvidia-smi` and choose accordingly. See [pytorch.org](https://pytorch.org/get-started/locally/) for other options.
+
+### Step 3: Install Dependencies
+
+```bash
 pip install -r requirements.txt
 ```
+
+### Verify Installation
+
+```bash
+python -c "import torch; print(f'PyTorch: {torch.__version__}, CUDA: {torch.cuda.is_available()}')"
+```
+
+Expected output: `PyTorch: 2.x.x+cu124, CUDA: True`
 
 ## Configuration
 
