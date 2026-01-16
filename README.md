@@ -74,7 +74,15 @@ Check your CUDA version with `nvidia-smi` and choose accordingly. See [pytorch.o
 pip install -r requirements.txt
 ```
 
-### Step 5: Configure Environment
+### Step 5: Verify Installation
+
+```bash
+python -c "import torch; print(f'PyTorch: {torch.__version__}, CUDA: {torch.cuda.is_available()}')"
+```
+
+Expected output: `PyTorch: 2.x.x+cu124, CUDA: True`
+
+### Step 6: Configure Environment
 
 ```bash
 cp .env.example .env
@@ -88,14 +96,6 @@ ASR_BATCH_SIZE=4                       # Reduce if OOM errors
 CHUNK_DURATION_SECONDS=600             # 10 minutes (reduce for less GPU memory)
 NUM_WORKERS=1                          # Increase for parallel file processing
 ```
-
-### Step 6: Verify Installation
-
-```bash
-python -c "import torch; print(f'PyTorch: {torch.__version__}, CUDA: {torch.cuda.is_available()}')"
-```
-
-Expected output: `PyTorch: 2.x.x+cu124, CUDA: True`
 
 ## Setting Number of Speakers
 
