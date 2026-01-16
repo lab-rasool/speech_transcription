@@ -31,13 +31,17 @@ Combines NVIDIA NeMo ASR with pyannote.audio speaker diarization for multi-speak
 
 ## Installation
 
+**Option A: Using Conda (recommended for ML projects)**
 ```bash
-# Create virtual environment
+conda create -n speech_transcription python=3.11
+conda activate speech_transcription
+pip install -r requirements.txt
+```
+
+**Option B: Using venv**
+```bash
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
-# venv\Scripts\activate   # Windows
-
-# Install dependencies
 pip install -r requirements.txt
 ```
 
