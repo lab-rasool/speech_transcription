@@ -31,7 +31,16 @@ Combines NVIDIA NeMo ASR with pyannote.audio speaker diarization for multi-speak
 
 ## Installation
 
-### Step 1: Create Environment
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/lab-rasool/speech_transcription.git
+cd speech_transcription
+```
+
+Or download the ZIP from GitHub and extract it.
+
+### Step 2: Create Environment
 
 **Option A: Using Conda (recommended)**
 ```bash
@@ -45,7 +54,7 @@ python -m venv venv
 source venv/bin/activate  # Linux/Mac
 ```
 
-### Step 2: Install PyTorch with CUDA
+### Step 3: Install PyTorch with CUDA
 
 Install PyTorch with GPU support **before** other dependencies:
 
@@ -59,13 +68,21 @@ pip install torch --index-url https://download.pytorch.org/whl/cu118
 
 Check your CUDA version with `nvidia-smi` and choose accordingly. See [pytorch.org](https://pytorch.org/get-started/locally/) for other options.
 
-### Step 3: Install Dependencies
+### Step 4: Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Verify Installation
+### Step 5: Configure Environment
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` and add your HuggingFace token (get one at https://huggingface.co/settings/tokens).
+
+### Step 6: Verify Installation
 
 ```bash
 python -c "import torch; print(f'PyTorch: {torch.__version__}, CUDA: {torch.cuda.is_available()}')"
