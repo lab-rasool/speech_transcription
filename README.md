@@ -58,6 +58,37 @@ CHUNK_DURATION_SECONDS=600             # 10 minutes (reduce for less GPU memory)
 NUM_WORKERS=1                          # Increase for parallel file processing
 ```
 
+## Configuration for Setting Number of Speakers
+
+Adjust speaker detection in your `.env` file based on your use case:
+
+**For interviews (2 people):**
+```bash
+DIARIZATION_MIN_SPEAKERS=2
+DIARIZATION_MAX_SPEAKERS=2
+```
+
+**For meetings (multiple people):**
+```bash
+DIARIZATION_MIN_SPEAKERS=2
+DIARIZATION_MAX_SPEAKERS=10
+```
+
+**For unknown number of speakers:**
+```bash
+DIARIZATION_MIN_SPEAKERS=1
+DIARIZATION_MAX_SPEAKERS=10
+```
+
+| Use Case | MIN | MAX | Notes |
+|----------|-----|-----|-------|
+| 1-on-1 Interview | 2 | 2 | Most accurate for known 2-person conversations |
+| Small Meeting | 2 | 6 | Typical team meetings |
+| Large Meeting | 2 | 10 | Conferences, group discussions |
+| Unknown | 1 | 10 | Let pyannote decide automatically |
+
+**Tip:** Setting `MAX_SPEAKERS` slightly higher than expected is better than too low - pyannote will only detect speakers it actually hears.
+
 ## Usage
 
 ```bash
