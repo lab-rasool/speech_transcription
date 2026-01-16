@@ -1,0 +1,76 @@
+# Environment variables (contains secrets)
+.env
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Audio Files (large files, not tracked)
+data/audio/*.wav
+data/audio/*.mp3
+data/audio/*.flac
+data/audio/*.m4a
+data/audio/*.ogg
+data/audio_backup/
+data/longer-audios/
+
+# Results (optional - comment out if you want to track them)
+results/*
+!results/.gitkeep
+
+# Logs
+logs/
+*.log
+
+# Model Cache
+.cache/
+models/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# PyTorch
+*.pth
+*.pt
+
+# HuggingFace Cache
+.huggingface/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
