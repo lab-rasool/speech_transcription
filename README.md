@@ -80,7 +80,14 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
-Edit `.env` and add your HuggingFace token (get one at https://huggingface.co/settings/tokens).
+Edit `.env` and add your HuggingFace token (get one at https://huggingface.co/settings/tokens):
+
+```bash
+HUGGINGFACE_TOKEN=hf_your_token_here  # Required for pyannote
+ASR_BATCH_SIZE=4                       # Reduce if OOM errors
+CHUNK_DURATION_SECONDS=600             # 10 minutes (reduce for less GPU memory)
+NUM_WORKERS=1                          # Increase for parallel file processing
+```
 
 ### Step 6: Verify Installation
 
@@ -90,24 +97,7 @@ python -c "import torch; print(f'PyTorch: {torch.__version__}, CUDA: {torch.cuda
 
 Expected output: `PyTorch: 2.x.x+cu124, CUDA: True`
 
-## Configuration
-
-Copy `.env.example` to `.env` and configure:
-
-```bash
-cp .env.example .env
-# Edit .env with your settings
-```
-
-Key settings:
-```bash
-HUGGINGFACE_TOKEN=hf_your_token_here  # Required for pyannote
-ASR_BATCH_SIZE=4                       # Reduce if OOM errors
-CHUNK_DURATION_SECONDS=600             # 10 minutes (reduce for less GPU memory)
-NUM_WORKERS=1                          # Increase for parallel file processing
-```
-
-## Configuration for Setting Number of Speakers
+## Setting Number of Speakers
 
 Adjust speaker detection in your `.env` file based on your use case:
 
