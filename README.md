@@ -97,7 +97,7 @@ CHUNK_DURATION_SECONDS=600             # 10 minutes (reduce for less GPU memory)
 NUM_WORKERS=1                          # Increase for parallel file processing
 ```
 
-## Setting Number of Speakers
+#### Setting Number of Speakers
 
 Adjust speaker detection in your `.env` file based on your use case:
 
