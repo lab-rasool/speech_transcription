@@ -126,7 +126,7 @@ DIARIZATION_MAX_SPEAKERS=10
 | Large Meeting | 2 | 10 | Conferences, group discussions |
 | Unknown | 1 | 10 | Let pyannote decide automatically |
 
-**Tip:** Setting `MAX_SPEAKERS` slightly higher than expected is better than too low - pyannote will only detect speakers it actually hears.
+**Tip:** Setting `MAX_SPEAKERS` slightly higher than expected is better than too low. However, accuracy decreases with more speakers (harder to distinguish voices) and processing time increases. `MAX_SPEAKERS` can be set to more than 10.
 
 ## Usage
 
