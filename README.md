@@ -130,8 +130,10 @@ DIARIZATION_MAX_SPEAKERS=10
 
 ## Usage
 
+1. Place your audio files in the `data/audio/` folder inside the repo
+2. Run transcription:
+
 ```bash
-# Place audio files in data/audio/
 python main.py
 ```
 
