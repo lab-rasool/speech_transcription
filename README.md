@@ -197,7 +197,7 @@ Audio File
 
 ## Credits
 
-Based on [maaz328/speech-diarization-transcription](https://github.com/maaz328/speech-diarization-transcription) with significant modifications for long audio support and memory optimization.
+Based on [maaz328/speech-diarization-transcription](https://github.com/maaz328/speech-diarization-transcription) with modifications for long audio support and memory optimization.
 
 ## License
 
