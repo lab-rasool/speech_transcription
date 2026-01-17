@@ -25,9 +25,16 @@ Combines NVIDIA NeMo ASR with pyannote.audio speaker diarization for multi-speak
 
 - Python 3.8+
 - NVIDIA GPU with CUDA 11.8+ (recommended)
-- HuggingFace account with access to:
-  - https://huggingface.co/pyannote/speaker-diarization-3.1
-  - https://huggingface.co/pyannote/segmentation-3.0
+- HuggingFace account and API token
+
+### Getting HuggingFace Access
+
+1. Create a HuggingFace account at https://huggingface.co/join
+2. Get your API token at https://huggingface.co/settings/tokens (create a new token with read access)
+3. Request access to these models (click the links and accept the terms):
+   - https://huggingface.co/pyannote/speaker-diarization-3.1
+   - https://huggingface.co/pyannote/segmentation-3.0
+4. Wait for approval (usually instant)
 
 ## Installation
 
